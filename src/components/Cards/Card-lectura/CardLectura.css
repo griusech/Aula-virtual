@@ -1,10 +1,9 @@
 .card-container {
-  /* padding: 20px; */
   border: 1px solid #dfdfda;
   border-radius: 7px;
-  width: 70%;
-  /* min-width: 1920px; */
+  width: 50%;
   margin: auto;
+  max-width: 1920px;
 }
 
 .card-section {
@@ -16,30 +15,69 @@
   display: grid;
   align-items: center;
   gap: 10px;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   border-bottom: 1px solid #dfdfda;
-  padding: 15px;
+  padding: 10px;
+}
+.item-things {
+  display: flex;
+  align-items: center;
 }
 
-.item6 {
-  grid-column: 6/6;
+.item1 {
+  grid-column: 1/5;
+  overflow: hidden;
+}
+
+.item-icon {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 3px;
+  background-color: #c3e9e2;
+  margin-right: 10px;
+}
+
+.item-icon > .MuiSvgIcon-root {
   margin: auto;
 }
 
-.item6 > .MuiButtonBase-root {
+.item2 {
+  grid-column: 6/9;
+  overflow: hidden;
+}
+
+.item3 {
+  grid-column: 10 / 12;
+  overflow: hidden;
+}
+
+.item4 {
+  grid-column: 12/12;
+  margin: auto;
+}
+
+.item4 > .MuiButtonBase-root {
   background-color: #251964;
+  color: white;
+  font-size: 10px;
+  width: 6rem;
+  height: 35px;
+}
+
+.item4 > .MuiButtonBase-root:hover {
+  background-color: #5e4fa8;
   color: white;
   width: 6rem;
 }
 
-.tiem6 > .MuiButton {
-  background-color: #4f36d6;
-}
-
 .card-footer {
   display: flex;
-  /* align-items: center; */
-  /* background-color: red; */
-  padding: 15px;
   justify-content: space-between;
+  padding: 10px;
+}
+
+.card-footer > .MuiSvgIcon-root {
+  font-size: 18px;
 }
