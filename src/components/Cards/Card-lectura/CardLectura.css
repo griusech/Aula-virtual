@@ -1,9 +1,10 @@
 .card-container {
   border: 1px solid #dfdfda;
   border-radius: 7px;
-  width: 50%;
+  /* width: 50%; */
   margin: auto;
   max-width: 1920px;
+  min-width: 360px;
 }
 
 .card-section {
@@ -19,6 +20,7 @@
   border-bottom: 1px solid #dfdfda;
   padding: 10px;
 }
+
 .item-things {
   display: flex;
   align-items: center;
@@ -26,17 +28,20 @@
 
 .item1 {
   grid-column: 1/5;
+}
+
+.item1 p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
   overflow: hidden;
 }
 
 .item-icon {
   display: flex;
   align-items: center;
-  width: 35px;
-  height: 35px;
   border-radius: 3px;
-  background-color: #c3e9e2;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .item-icon > .MuiSvgIcon-root {
@@ -48,6 +53,21 @@
   overflow: hidden;
 }
 
+.item2,
+.item3,
+h5 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #6d7878;
+}
+
+.item2,
+.item3 p {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .item3 {
   grid-column: 10 / 12;
   overflow: hidden;
@@ -55,13 +75,14 @@
 
 .item4 {
   grid-column: 12/12;
-  margin: auto;
+  float: right;
 }
 
 .item4 > .MuiButtonBase-root {
   background-color: #251964;
+  text-transform: none;
   color: white;
-  font-size: 10px;
+  font-size: 13px;
   width: 6rem;
   height: 35px;
 }
@@ -74,10 +95,39 @@
 
 .card-footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 7px 10px 7px;
+  /* margin-left: 10px; */
 }
 
 .card-footer > .MuiSvgIcon-root {
   font-size: 18px;
+}
+
+.boton-materia {
+  display: flex;
+  align-items: center;
+  width: 73px;
+  height: 24px;
+  border: 1px solid #dfdfda;
+  border-radius: 16px;
+  margin: 4px 0px;
+  padding: 10px;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: #01ceaa;
+  flex: none;
+}
+
+.materia {
+  font-weight: bold;
+  font-size: 12px;
+  color: #1a1a1a;
 }
