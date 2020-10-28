@@ -1,6 +1,7 @@
 import React from 'react'
 import CardLectura from '../Cards/Card-lectura/CardLectura'
 import Progress from '../Icons/Progress'
+import Task from '../Icons/Taks'
 import CalendarTodayOutlinedIcon from '@material-ui/icons/CalendarTodayOutlined';
 
 const Lectura = () => {
@@ -12,6 +13,7 @@ const Lectura = () => {
                 continuar = "Continuar"
                 calendar={<CalendarTodayOutlinedIcon />}
                 progressIcon={<Progress />}
+                task={<Task />}
                 progress="Progreso"
                 numberProgress="25%"
             />

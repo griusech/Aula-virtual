@@ -15,7 +15,7 @@
 .card-header {
   display: grid;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
   grid-template-columns: repeat(12, 1fr);
   border-bottom: 1px solid #dfdfda;
   padding: 10px;
@@ -26,8 +26,16 @@
   align-items: center;
 }
 
+.item-iconTask {
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  margin-right: 8px;
+  /* max-width: 5px; */
+}
+
 .item1 {
-  grid-column: 1/5;
+  grid-column: 2/5;
 }
 
 .item1 p {
@@ -83,14 +91,13 @@ h5 {
   text-transform: none;
   color: white;
   font-size: 13px;
-  width: 6rem;
-  height: 35px;
+  width: 5rem;
+  /* height: 35px; */
 }
 
 .item4 > .MuiButtonBase-root:hover {
   background-color: #5e4fa8;
   color: white;
-  width: 6rem;
 }
 
 .card-footer {
@@ -101,8 +108,10 @@ h5 {
   /* margin-left: 10px; */
 }
 
-.card-footer > .MuiSvgIcon-root {
+.chatIcon > .MuiSvgIcon-root {
+  display: flex;
   font-size: 18px;
+  align-items: center;
 }
 
 .boton-materia {
@@ -130,4 +139,66 @@ h5 {
   font-weight: bold;
   font-size: 12px;
   color: #1a1a1a;
+}
+
+@media screen and (max-width: 700px) {
+  .card-header {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .item-icon svg {
+    width: 18px;
+  }
+
+  .item2,
+  .item3 {
+    grid-column: 2/5;
+  }
+
+  .item-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .item-info p {
+    margin-left: 5px;
+  }
+
+  .item4 {
+    grid-column: 12/13;
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card-header {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .item1,
+  .item2,
+  .item3 {
+    grid-column: 2/8;
+  }
+
+  .item-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .item4 {
+    grid-column: 7/8;
+    grid-row: 4/5;
+  }
+
+  .card-footer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .chatIcon {
+    grid-column: 7 / 8;
+  }
 }
