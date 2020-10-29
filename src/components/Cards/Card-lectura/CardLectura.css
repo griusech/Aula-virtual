@@ -1,8 +1,7 @@
 .card-container {
   border: 1px solid #dfdfda;
   border-radius: 7px;
-  /* width: 50%; */
-  margin: auto;
+  margin: 20px;
   max-width: 1920px;
   min-width: 360px;
 }
@@ -16,7 +15,7 @@
   display: grid;
   align-items: center;
   gap: 0px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: max-content repeat(10, 1fr) max-content;
   border-bottom: 1px solid #dfdfda;
   padding: 10px;
 }
@@ -29,9 +28,17 @@
 .item-iconTask {
   display: flex;
   align-items: center;
-  border-radius: 3px;
+
+  /* border-radius: 3px; */
   margin-right: 8px;
-  /* max-width: 5px; */
+}
+
+.conClase {
+  color: #f45c3a;
+}
+
+.v-hidden {
+  visibility: hidden;
 }
 
 .item1 {
@@ -83,7 +90,6 @@ h5 {
 
 .item4 {
   grid-column: 12/12;
-  float: right;
 }
 
 .item4 > .MuiButtonBase-root {
@@ -143,16 +149,20 @@ h5 {
 
 @media screen and (max-width: 700px) {
   .card-header {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: max-content repeat(5, 1fr);
+    grid-template-rows: 1fr 40px 15px;
   }
 
   .item-icon svg {
-    width: 18px;
+    width: 20px;
   }
 
   .item2,
   .item3 {
+    grid-column: 2/7;
+  }
+
+  .item-infoTask {
     grid-column: 2/5;
   }
 
@@ -171,34 +181,29 @@ h5 {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 400px) {
   .card-header {
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: max-content repeat(4, 1fr);
+    grid-template-rows: 1fr 40px 15px;
   }
 
   .item1,
   .item2,
   .item3 {
-    grid-column: 2/8;
+    grid-column: 2/6;
+  }
+
+  .item3 {
+    margin-top: 2px;
   }
 
   .item-info {
-    display: flex;
+    font-size: 13px;
     align-items: center;
   }
 
   .item4 {
-    grid-column: 7/8;
+    grid-column: 5/6;
     grid-row: 4/5;
-  }
-
-  .card-footer {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  .chatIcon {
-    grid-column: 7 / 8;
   }
 }

@@ -7,11 +7,13 @@ const CardLectura = (
     {
     fecha, 
     entrega, 
-    continuar, 
+    textButton,
     calendar, 
     progressIcon, 
     progress, 
-    task,
+    iconTask,
+    newTask,
+    delayedTask,
     numberProgress
     }) => {
 
@@ -21,13 +23,14 @@ const CardLectura = (
                 <div className="card-header">
                     
                         <div className="item-iconTask">
-                            {task}
+                            {iconTask}
                         </div>
                         <div className="item1">
                             <div className="item-things">
                                 <div className="item-infoTask">
                                     <h5>LECTURA</h5>
                                     <p>Cuentos para aprender ortografía</p>
+                                    <p>{newTask ? newTask : delayedTask}</p>
                                 </div>
                             </div>
 
@@ -41,7 +44,7 @@ const CardLectura = (
                                 </div>
                                 <div className="item-info">
                                     <h5>{entrega}</h5>
-                                    <p>{fecha}</p>
+                                    <p className={delayedTask ? "conClase" : ""}>{fecha}</p>
                                 </div>
 
                             </div>
@@ -53,6 +56,9 @@ const CardLectura = (
 
                                 </div>
                                 <div className="item-info">
+                                    {
+                                        
+                                    }
                                     <h5>{progress}</h5>
                                     <p>{numberProgress}</p>
                                 </div>
@@ -60,11 +66,14 @@ const CardLectura = (
                             </div>
                         </div>
 
-                        <div className="item4">
+                       
+
+                        <div className={textButton ? "item4" : "item4 v-hidden"}>
                             <Button>
-                                {continuar}
+                                {textButton}
                             </Button> 
                         </div>
+                        
                     
                 </div>
                 <div className="card-footer">
