@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Lectura from './components/Lectura/Lectura'
+import TasksList from './components/TasksList/TasksList'
 
 function App() {
   return (
     <div className="App">
-      <Lectura />
+      <TasksList />
     </div>
   );
 }

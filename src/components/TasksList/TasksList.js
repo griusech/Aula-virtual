@@ -1,5 +1,5 @@
 import React from 'react'
-import CardLectura from '../Cards/Card-lectura/CardLectura'
+import CardTask from '../Cards/CardTask/CardTask'
 import Progress from '../Icons/Progress'
 import Task from '../Icons/Taks'
 import NewTask from '../Icons/NewTask'
@@ -12,7 +12,7 @@ import EventAvailableOutlinedIcon from '@material-ui/icons/EventAvailableOutline
 const Lectura = () => {
     return (
         <div>
-            <CardLectura 
+            <CardTask 
                 entrega="Fecha de Entrega"
                 fecha="15 de Abril"
                 textButton = "Continuar"
@@ -22,7 +22,7 @@ const Lectura = () => {
                 progress="Progreso"
                 numberProgress="25%"
             />
-            <CardLectura 
+            <CardTask 
                 entrega="Fecha de Entrega"
                 fecha="15 de Abril"
                 textButton = "Comenzar"
@@ -33,7 +33,7 @@ const Lectura = () => {
                 progress="Progreso"
                 numberProgress="-"
             />
-            <CardLectura 
+            <CardTask 
                 entrega="Fecha de Entrega"
                 fecha="15 de Abril"
                 textButton = "Continuar"
@@ -44,7 +44,7 @@ const Lectura = () => {
                 progress="Progreso"
                 numberProgress="25%"
             />
-            <CardLectura 
+            <CardTask 
                 entrega="Fecha de Entrega"
                 fecha="15 de Abril"
                 calendar={<EventAvailableOutlinedIcon />}
@@ -53,7 +53,7 @@ const Lectura = () => {
                 progress="Actividad Completada"
             />
 
-            {/* <CardLectura 
+            {/* <CardTask 
                 entrega="Fecha de Entrega"
                 fecha="15 de Abril"
                 calendar={<EventAvailableOutlinedIcon />}

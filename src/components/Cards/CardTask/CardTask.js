@@ -1,5 +1,5 @@
 import React from 'react'
-import './CardLectura.css'
+import './CardTask.css'
 import Button from '@material-ui/core/Button';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 
